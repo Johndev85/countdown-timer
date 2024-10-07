@@ -1,54 +1,49 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro"
 
-import Card from '../components/Card.astro';
-
+import Card from "../components/Card.astro"
 ---
 
 <Layout title="Tatacoa Desert: The Final Countdown">
-	<main>
+  <main>
     <div class="text-container">
-      <h1> <span class="first-text">Tatacoa Desert: </span> </h1>
-      <h2><span class="second-text">  The Final Countdown</span></h2>
+      <h1><span class="first-text">Ruta de los Nevados: </span></h1>
+      <h2><span class="second-text"> Murillo Adventure</span></h2>
     </div>
-      
-		<div id="countdown" class="countdown">
-      <div  class="time">
+
+    <div id="countdown" class="countdown">
+      <!-- <div class="time">
         <h2 class="text-gradient" id="years">00</h2>
         <small>years</small>
+      </div> -->
+      <div class="time">
+        <h2 class="text-gradient" id="days">00</h2>
+        <small>days</small>
       </div>
-			<div  class="time">
-				<h2 class="text-gradient" id="days">00</h2>
-				<small>days</small>
-			</div>
-			<div  class="time">
-				<h2 class="text-gradient" id="hours">00</h2>
-				<small>hours</small>
-			</div>
-			<div  class="time">
-				<h2 class="text-gradient" id="minutes">00</h2>
-				<small>minutes</small>
-			</div>
-			<div  class="time">
-				<h2 class="text-gradient" id="seconds">00</h2>
-				<small>seconds</small>
-			</div>
-		</div>
+      <div class="time">
+        <h2 class="text-gradient" id="hours">00</h2>
+        <small>hours</small>
+      </div>
+      <div class="time">
+        <h2 class="text-gradient" id="minutes">00</h2>
+        <small>minutes</small>
+      </div>
+      <div class="time">
+        <h2 class="text-gradient" id="seconds">00</h2>
+        <small>seconds</small>
+      </div>
+    </div>
 
-    
     <div id="countDownImage" class="countdown-image">
-    <Card />
-
+      <Card />
     </div>
     <div id="audio" class="audio-container"></div>
-
-
-	</main>
+  </main>
 </Layout>
 
 <style>
-	main {
-		width: 100%;
+  main {
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -62,22 +57,21 @@ import Card from '../components/Card.astro';
       width: auto;
       max-width: 700px;
       & h1 {
-      margin: 0;
-      margin-bottom: 10px;
-      font-weight: 600;
-      line-height: 1.4;
-      text-wrap: balance;
-      text-align: center;
-      transform: rotate(-5deg);
-      .first-text {
-        padding: 5px;
-        font-size: 5rem;
-        background-color: #e9510a;
-        color: #e1fff9;
-       
+        margin: 0;
+        margin-bottom: 10px;
+        font-weight: 600;
+        line-height: 1.4;
+        text-wrap: balance;
+        text-align: center;
+        transform: rotate(-5deg);
+        .first-text {
+          padding: 5px;
+          font-size: 5rem;
+          background-color: #20a4c5;
+          color: #e0f7fa;
+        }
       }
-    }
-    & h2 {
+      & h2 {
         margin: 0;
         font-weight: 600;
         line-height: 1.4;
@@ -86,238 +80,257 @@ import Card from '../components/Card.astro';
         .second-text {
           padding: 5px;
           font-size: 3.5rem;
-          background-color: #ff7402;
-          color: #e1fff9;
+          background-color: #20a4c5;
+          color: #e0f7fa;
         }
       }
-
     }
-		.countdown {
-			width: 100%;
-			display: flex;
-			justify-content: center;
-			gap: 50px;
-			.time {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				& h2 {
+    .countdown {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      .time {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & h2 {
           margin: 10px 0;
-					font-size: 6.5rem;
-				}
+          font-size: 6.5rem;
+        }
         & small {
           font-size: 1.8rem;
           font-weight: 500;
           text-transform: capitalize;
-          color: #ff7402;
+          color: #dbe2de;
         }
-			}
-	    }
-      .countdown-image {
-        display: none;
-        width: 80%;
-        justify-content: center;
-        opacity: 0;
-        transition: 1s all ease-out;
       }
-      & audio {
-        margin-top: 30px;
-      }
-	}
-
+    }
+    .countdown-image {
+      display: none;
+      width: 80%;
+      justify-content: center;
+      opacity: 0;
+      transition: 1s all ease-out;
+    }
+    & audio {
+      margin-top: 30px;
+    }
+  }
 
   @media (max-width: 470px) {
-    
     main {
-    gap: 30px;
-    .text-container {
+      gap: 30px;
+      .text-container {
         & h1 {
           .first-text {
             font-size: 2.8rem;
           }
-      }
-      & h2 {
+        }
+        & h2 {
           .second-text {
             font-size: 2rem;
           }
         }
-    }
-		.countdown {
-			gap: 25px;
-			.time {
-				& h2 {
-          margin: 0;
-					font-size: 3.8rem;
-				}
-        & small {
-          font-size: 1.1rem;
+      }
+      .countdown {
+        gap: 25px;
+        .time {
+          & h2 {
+            margin: 0;
+            font-size: 3.8rem;
+          }
+          & small {
+            font-size: 1.1rem;
+          }
         }
-			}
-	    }
-	}
-
-
+      }
+    }
   }
-
 
   .text-gradient {
     color: transparent;
-      -webkit-background-clip: text;
-      background-clip: text;
-      background-image: linear-gradient(to left, #f57b18, #e1fff9, #cf4116, #faeb1e, #e1fff9, #f57b18);
-      animation: color 8s linear infinite;
-       background-size: 500%;    
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(
+      to left,
+      #20a4c5,
+      /* Verde claro */ #20a4c5,
+      /* Azul claro */ #cfd8dc,
+      /* Gris claro */ #e0f7fa,
+      /* Blanco */ #e0f7fa,
+      /* Azul claro */ #20a4c5 /* Verde claro */
+    );
+    animation: color 8s linear infinite;
+    background-size: 500%;
   }
 
-@keyframes color {
+  @keyframes color {
     0% {
-        background-position: 0% 50%;
+      background-position: 0% 50%;
     }
 
     50% {
-        background-position: 100% 50%;
+      background-position: 100% 50%;
     }
 
     100% {
       background-position: 0% 50%;
     }
-}
-
+  }
 </style>
 
-
 <script>
-    import confetti from 'canvas-confetti'
+  import confetti from "canvas-confetti"
 
-    
-document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
+    const years = document.getElementById("years")
+    const days = document.getElementById("days")
+    const hours = document.getElementById("hours")
+    const minutes = document.getElementById("minutes")
+    const seconds = document.getElementById("seconds")
+    const countdownImage = document.getElementById("countDownImage")
 
-const  years = document.getElementById('years');
-const days = document.getElementById('days');
-const hours = document.getElementById('hours');
-const minutes = document.getElementById('minutes');
-const seconds = document.getElementById('seconds');
-const countdownImage = document.getElementById('countDownImage')
+    //songs
+    const songs = [
+      "/assets/nevado/audio/song1.mp3",
+      "/assets/nevado/audio/song2.mp3",
+      "/assets/nevado/audio/song3.mp3",
+      "/assets/nevado/audio/song4.mp3",
+      "/assets/nevado/audio/song5.mp3",
+      "/assets/nevado/audio/song6.mp3",
+      "/assets/nevado/audio/song7.mp3",
+      "/assets/nevado/audio/song8.mp3",
+    ]
 
-//songs
-const songs = [
-  '/assets/audio/final-countdown.mp3',
-  '/assets/audio/song2.mp3','/assets/audio/song3.mp3','/assets/audio/song4.mp3','/assets/audio/song5.mp3','/assets/audio/song6.mp3','/assets/audio/song7.mp3'
-];
+    //backgrounds
+    const backgrounds = [
+      "./assets/nevado/bg1.jpeg",
+      "./assets/nevado/bg2.jpeg",
+      "./assets/nevado/bg3.jpeg",
+      "./assets/nevado/bg4.jpeg",
+      "./assets/nevado/bg5.jpeg",
+      "./assets/nevado/bg6.jpeg",
+      "./assets/nevado/bg7.jpeg",
+      "./assets/nevado/bg8.jpeg",
+      "./assets/nevado/bg9.jpeg",
+      "./assets/nevado/bg10.jpeg",
+      "./assets/nevado/bg11.jpeg",
+      "./assets/nevado/bg12.jpeg",
+      "./assets/nevado/bg13.jpeg",
+    ]
 
-//backgrounds
-const backgrounds = [
-  './assets/bg.jpeg',
-  './assets/bg2.jpeg','./assets/bg3.jpeg','./assets/bg4.jpeg','./assets/bg5.jpeg','./assets/bg6.jpeg','./assets/bg7.jpeg','./assets/bg8.jpeg','./assets/bg9.jpeg','./assets/bg10.jpeg','./assets/bg11.jpeg','./assets/bg12.jpeg','./assets/bg13.jpeg'
-];
+    // target date
+    const targetTime = new Date(`October 12 2024 05:00:00`)
+    const currentTime = new Date()
+    let diff = targetTime - currentTime
 
-// target date
-const targetTime = new Date(`December 31 2030 23:59:59`)
-const currentTime = new Date()
-let diff = targetTime - currentTime;
+    //create audio element
+    const audioConter = document.getElementById("audio")
+    const audioElement = new Audio()
+    audioElement.controls = true
+    audioElement.autoplay = true
+    audioElement.innerHTML = `Tu navegador no soporta audio HTML5.`
+    audioConter.appendChild(audioElement)
 
-//create audio element
-const audioConter = document.getElementById('audio')
-const audioElement = new Audio()
-audioElement.controls = true
-audioElement.autoplay = true
-audioElement.innerHTML = `Tu navegador no soporta audio HTML5.`
-audioConter.appendChild(audioElement)
+    const playRandomSong = () => {
+      const randomIndex = Math.floor(Math.random() * songs.length)
+      audioElement.src = songs[randomIndex]
+      audioElement.play()
+    }
+    audioElement.onended = playRandomSong
 
-
-const playRandomSong = () => {
-  const randomIndex = Math.floor(Math.random() * songs.length)
-  audioElement.src = songs[randomIndex]
-  audioElement.play()
-}
-audioElement.onended = playRandomSong
-
-
-const updateBackground = () => {
-  const randomIndex = Math.floor(Math.random() * backgrounds.length);
-  const selectedBackground = backgrounds[randomIndex];
-  document.querySelector('main').style.backgroundImage = `url('${selectedBackground}')`;
-};
-
-
-// add confetti
-const callFireworks = ()=> {
-    const duration = 15 * 1000;
-    const animationEnd = Date.now() + duration;
-    const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
-
-      
-    function randomInRange(min, max) {
-    return Math.random() * (max - min) + min;
+    const updateBackground = () => {
+      const randomIndex = Math.floor(Math.random() * backgrounds.length)
+      const selectedBackground = backgrounds[randomIndex]
+      document.querySelector("main").style.backgroundImage =
+        `url('${selectedBackground}')`
     }
 
-    var interval = setInterval(function() {
-    var timeLeft = animationEnd - Date.now();
+    // add confetti
+    const callFireworks = () => {
+      const duration = 15 * 1000
+      const animationEnd = Date.now() + duration
+      const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 }
 
-    if (timeLeft <= 0) {
-      return clearInterval(interval);
+      function randomInRange(min, max) {
+        return Math.random() * (max - min) + min
+      }
+
+      var interval = setInterval(function () {
+        var timeLeft = animationEnd - Date.now()
+
+        if (timeLeft <= 0) {
+          return clearInterval(interval)
+        }
+
+        var particleCount = 50 * (timeLeft / duration)
+        // since particles fall down, start a bit higher than random
+        confetti({
+          ...defaults,
+          particleCount,
+          origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+        })
+        confetti({
+          ...defaults,
+          particleCount,
+          origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+        })
+      }, 250)
     }
 
-    var particleCount = 50 * (timeLeft / duration);
-    // since particles fall down, start a bit higher than random
-    confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
-    confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
-    }, 250);
-  }
+    const imageCountdown = () => {
+      countdownImage.style.opacity = "1"
+      countdownImage.style.display = "flex"
+    }
 
+    const updateCountdown = () => {
+      const remainingYears = Math.max(
+        Math.floor(diff / 1000 / 60 / 60 / 24 / 365)
+      )
+      const remainingDays = Math.max(Math.floor(diff / 1000 / 60 / 60 / 24))
+      const remainingHours = Math.max(Math.floor(diff / 1000 / 60 / 60) % 24)
+      const remainingMinutes = Math.max(Math.floor(diff / 1000 / 60) % 60)
+      const remainingSeconds = Math.max(Math.floor(diff / 1000) % 60)
 
-  const imageCountdown = () => {
-    countdownImage.style.opacity = '1';
-    countdownImage.style.display = 'flex';
-  }
+      if (
+        // remainingYears === 0 &&
+        remainingDays === 0 &&
+        remainingHours === 0 &&
+        remainingMinutes === 0 &&
+        remainingSeconds === 0
+      ) {
+        callFireworks()
+        clearInterval(countdownInterval)
+        imageCountdown()
+      }
 
-const updateCountdown = () => {
-   console.log(diff)
-   
-  const remainingYears = Math.max(Math.floor(diff / 1000 / 60 / 60 / 24 / 365));
-  const remainingDays = Math.max(Math.floor(diff / 1000 / 60 / 60 / 24 ));
-  const remainingHours = Math.max(Math.floor(diff / 1000 / 60 / 60) % 24);
-  const remainingMinutes = Math.max(Math.floor(diff / 1000 / 60) % 60);
-  const remainingSeconds = Math.max(Math.floor(diff / 1000 ) % 60);
+      // years.innerHTML = remainingYears
+      days.innerHTML = remainingDays
+      hours.innerHTML =
+        remainingHours < 10 ? "0" + remainingHours : remainingHours
+      minutes.innerHTML =
+        remainingMinutes < 10 ? "0" + remainingMinutes : remainingMinutes
+      seconds.innerHTML =
+        remainingSeconds < 10 ? "0" + remainingSeconds : remainingSeconds
+    }
 
-  if ( remainingYears === 0 && remainingDays === 0 && remainingHours === 0 && remainingMinutes === 0 && remainingSeconds === 0) {
-  callFireworks();
-  clearInterval(countdownInterval);
-  imageCountdown();
-}
-
-
-    years.innerHTML = remainingYears 
-   days.innerHTML = remainingDays
-   hours.innerHTML = remainingHours < 10 ? '0' + remainingHours  : remainingHours
-   minutes.innerHTML = remainingMinutes < 10 ? '0' + remainingMinutes : remainingMinutes
-   seconds.innerHTML = remainingSeconds < 10 ? '0' + remainingSeconds : remainingSeconds
-
-}
-
-const countdownInterval = setInterval(() => {
-  updateCountdown();
-      diff -= 1000;
+    const countdownInterval = setInterval(() => {
+      updateCountdown()
+      diff -= 1000
       if (diff < 0) {
-        diff = 0; // Asegura que diff no sea negativo
+        diff = 0 // Asegura que diff no sea negativo
+      }
+    }, 1000)
+
+    window.onload = () => {
+      updateBackground()
     }
-}, 1000);
 
+    setInterval(() => {
+      updateBackground()
+    }, 30000)
 
-
-window.onload = () => {
-  updateBackground()
-}
-
-setInterval(() => {
-  updateBackground()
-}, 30000)
-
-
-playRandomSong()
-
-
-
-})
-
+    playRandomSong()
+  })
 </script>
